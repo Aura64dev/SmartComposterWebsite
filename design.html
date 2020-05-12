@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Binary by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>The Smart Composter</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="compost_1.html" class="logo">The Smart Composter</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="compost_1.html">Home</a></li>
+                    <li><a href="compost_2.html">Description</a></li>
+                    <li><a href="background_research.html">Background Research</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="code.html">Code</a></li>
+                    <li><a href="team.html">Team</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					<div class="image fit">
+						<img src="https://i.postimg.cc/C1LcXxKs/compost.jpg" alt="" />
+					</div>
+					<header>
+						<h1>Design</h1>
+						
+					</header>
+					<h4>Construction</h4>
+					<p><span class="image right"><img src="https://i.postimg.cc/WzC4kzKN/print.jpg" alt="" /></span>The Smart Composter is made of 3d printed materials and wood. It uses pH, temperature, and humidity sensors to determine when to add leaves into the composter and Peltier tiles to generate heat which helps the decomposition process. To assist in temperature regulation the Peltier tiles are covered in a layer of tin foil insulation to trap the heat in the compost. To keep humidity at a consistent percentage we have implemented an automatic ventilation system.
+						At the center of the unit is the stepper motor which spins and stirs the compost for even distribution of newly-added leaves as well as regulation of the moisture level of the soil. The LCD provides instant feedback to the user by displaying the current readings of temperature, leaf amount, and humidity.
+						</p>
+					<h4>Materials</h4>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Item Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										<tr>
+											<td>Arduino Uno*</td>
+											<td>Microcontroller used to run the project</td>
+											<td>$5</td>
+										</tr>
+										<tr>
+											<td>Two-channel Relay x2*</td>
+											<td>The Smart Composter uses relays to switch components such as the mixer or leaf delivery system on and off</td>
+											<td>$6</td>
+										</tr>
+										<tr>
+											<td>LCD Screen*</td>
+											<td>The LCD mounted on the Smart Composter displays information about the compost such as its status or temperature.</td>
+											<td>$3</td>
+										</tr>
+										<tr>
+											<td>Air Ducting</td>
+											<td>The Smart Composter uses ducting to deliver the leaves into the compost</td>
+											<td>$14</td>
+										</tr>
+										<tr>
+											<td>Peltier Tiles x4</td>
+											<td>Peltier tiles are a heating/cooling unit used in the Smart Composter to maintain optimal temperature levels in the compost.</td>
+											<td>$14</td>
+										</tr>
+										<tr>
+											<td>Temperature Sensors x4</td>
+											<td>The temperature sensors are used to measure the temp of both the compost and the peltier tiles to help the Arduino know when to heat or cool the pile.</td>
+											<td>$12</td>
+										</tr>
+										<tr>
+											<td>Humidity Sensor</td>
+											<td>The Humidity sensor is used to monitor the humidity of the compost so that the user is more informed about how their compost is doing</td>
+											<td>$5.50</td>
+										</tr>
+										<tr>
+											<td>Smart Composter Main Housing*</td>
+											<td>The "box" containing all of the components as well as the compost itself</td>
+											<td>$20</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>$45.50</td>
+											<td>*these items were not purchased, we already had them</td>
+										</tr>
+									</tfoot>
+								</table>
+							<h4>Design Progression</h4>	
+							<h5>Prototype 1.0</h5>
+							<li>Spinning Stirrer</li>
+							<li>Moisture Sensors</li>
+							<li>Peltier Tiles</li>
+							<li>Website</li>
+							<p></p>
+							<h5>Prototype 1.1</h5>
+							<li>PH Sensor</li>
+							<li>Gas Sensor</li>
+							<li>Relay</li>
+							<li>App</li>
+							<p></p>
+							<h5>Prototype 1.2</h5>
+							<li>Fan</li>
+							<li>Electronics Box</li>
+							<li>LCD</li>
+							<p></p>
+							<h5>Prototype 2.0</h5>
+							<li>Fan Duct</li>
+							<li>Updated Stirrer with Bresels</li>
+							<li>Thermal Insulation (Tin Foil)</li>
+							<p></p>
+							</div>
+							<h4>Flow Chart</h4>
+							<div class="image fit">
+								<img src="https://i.postimg.cc/25j5sQFL/Flowchart.jpg" alt="" />
+							</div>
+							<h4>Circuit Diagram</h4>
+							<div class="image fit">
+								<img src="https://i.postimg.cc/Qx04hsc4/Circuit-Diagram-image.png" alt="" />
+							</div>
+							<div class="image fit">
+								<img src="https://i.postimg.cc/NFMcfDCZ/circuit-diagram-lines.png" alt="" />
+							</div>
+							<h4>More Images</h4>
+							<div class="row 50% uniform">
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/T32xrwpq/3d-fan-design.png" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/hP6QRrv2/designextras2.png" alt="" /></span></div>
+								<div class="4u$"><span class="image fit"><img src="https://i.postimg.cc/Y9CCWGj4/designextras3.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/bwRGSjLB/designextras4.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/VN6NS0JJ/designextras5.jpg" alt="" /></span></div>
+								<div class="4u$"><span class="image fit"><img src="https://i.postimg.cc/RZmdz4Ns/designextras9.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/1tBMvT9C/designextras7.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="https://i.postimg.cc/C1LcXxKs/compost.jpg" alt="" /></span></div>
+								<div class="4u$"><span class="image fit"><img src="https://i.postimg.cc/QMWRnjP6/designextras6.jpg" alt="" /></span></div>
+							</div>
+
+							
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!--<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>-->
+				<!--<div class="copyright">
+					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>-->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

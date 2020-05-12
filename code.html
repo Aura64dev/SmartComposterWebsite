@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>The Smart Composter</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="compost_1.html" class="logo">The Smart Composter</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="compost_1.html">Home</a></li>
+                    <li><a href="compost_2.html">Description</a></li>
+                    <li><a href="background_research.html">Background Research</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="code.html">Code</a></li>
+                    <li><a href="team.html">Team</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					<div class="image fit">
+						<img src="https://i.postimg.cc/XJCQQg1c/shit-code.jpg" alt="" />
+					</div>
+					<header>
+						<h1>Code</h1>
+						
+					</header>
+					<h4>Maps</h4>
+							<pre><code>
+temp = map(analogRead(A2), 0, 1023, 60, 170) ;
+soil = map(analogRead(A0), 0, 1023, 0, 100);
+humidity = map(analogRead(A3), 0, 1023, 0, 100);
+gas = map(analogRead(A1), 0, 1023, 0, 100);
+							</code></pre>
+					<p>To return useable values that make sense to the user, we mapped each analogRead output either to a range of temperatures that would be recognizeale, or to a 0-100 scale so as to show a percentage of each parameter rather than an arbitrary number.</p>
+					<h4>Logic</h4>
+							<pre><code>
+if(analogRead(A0)<=800)
+{
+	digitalWrite(5, LOW);
+	lcd.clear();
+	lcd.home();
+	lcd.print("Spinning!");
+	delay(10);
+}
+else  if(analogRead(A1)<=800)
+{
+	digitalWrite(4, LOW);
+	lcd.clear();
+	lcd.home();
+	lcd.print("Adding leaves!");
+	delay(10);
+								 
+}
+else  if(temp<=120)
+{
+	digitalWrite(6, LOW);
+	lcd.clear();
+	lcd.home();
+	lcd.print("Heating!");
+	delay(10);
+}
+							</code></pre>
+					<p>Each component of the Smart Composter is triggered by a relay which fires once the sensor that corresponds to a necessary parameter of compost goes above or below the desired range. To alert the user of what systems are running in the composter, the mounted LCD displays different text based on what process it is undergoing. Each component's logic needed to be put in the same if statement so as not to have the action displays overlap.</p>
+					<h4>Default Display</h4>
+							<pre><code>
+else{
+	digitalWrite(5, HIGH);
+	digitalWrite(4, HIGH);
+	digitalWrite(6, HIGH);
+	temp = map(analogRead(A2), 0, 1023, 60, 170) ;
+	soil = map(analogRead(A0), 0, 1023, 0, 100);
+	lcd.clear();
+	lcd.home();
+	lcd.print("TempF:");
+	lcd.print(temp);
+	lcd.print(" O2:");
+	lcd.print(gas);
+	lcd.setCursor(0,1);
+	lcd.print("SM:");
+	lcd.print(soil);
+	lcd. print(" HM:");
+	lcd.print(humidity);
+						   
+}
+							</code></pre>
+					<p>When the Smart Composter is not displaying the actions it is undergoing, the LCD prints the levels of each parameter being monitored so the user always knows the status of the compost. Staying engaged with your compost pile even if you aren't physically maintaining it is an important part of the composting process!</p>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!--<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>-->
+				<!--<div class="copyright">
+					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>-->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
